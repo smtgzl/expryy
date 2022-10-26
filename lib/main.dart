@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: Scaffold(
+        body: SafeArea(child: MyHomePage()),
+        backgroundColor: const Color(0xffF9F9F9),
+        ),
     );
   }
 }
@@ -34,10 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: const Color(0xffF9F9F9),
-      body: SafeArea(
-          child: Center(
+    return   Center(
 
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-          )),
+        
     );
   }
 }
